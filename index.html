@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quizo HTML Template - V.6</title>
+   <!-- FontAwesome-cdn include -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <!-- Google fonts include -->
+   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800;900&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+   <!-- Bootstrap-css include -->
+   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+   <!-- Animate-css include -->
+   <link rel="stylesheet" href="./assets/css/animate.min.css">
+   <!-- Main-StyleSheet include -->
+   <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+   <div class="wrapper overflow-hidden">
+      <button id="openPopup">Open Popup</button>
+      <div id="popup" class="container popup">
+         <form class="multisteps_form bg-white position-relative overflow-hidden" id="wizard" method="POST" action="">
+            <span id="closePopup" class="close animate__animated animate__fadeInRight animate_25ms">X</span>
+            <!------------------------- Step-1 ----------------------------->
+            <div class="multisteps_form_panel step" id="step-1">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">Discover Your Ideal Coffee Blend in Just Two Minutes</h1>
+               </div>
+
+               <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                  <div class="col-12 text-center px-5">
+                     <p class="animate__animated animate__fadeInRight animate_25ms">Answer a few questions in our Brew Finder to help us tailor coffee recommendations based on your daily habits and taste preferences.</p>
+                  </div>
+               </div>
+               <div class="row form_items mt-0 pt-0">
+                  <div class="col-4">
+                     <div class="form_items_content bg-white text-center position-relative step_1 animate__animated animate__fadeInRight animate_150ms">
+                        <label for="opt_1" class="d-block">
+                           <span class="form_items_icon">
+                              <img src="assets/images/item-img/customer.png" alt="image-not-found">
+                           </span>
+                           <span class="form_items_text pt-2 d-block">
+                              Coffee lovers
+                           </span>
+                           <span class="service-check-option">
+                              <span><input id="opt_1" type="radio" name="stp_1_select_option" value="customer"></span>
+                           </span>
+                        </label>
+                     </div>
+                     <!-- <ul class="list-unstyled p-0">
+                        <li class="step_1 animate__animated animate__fadeInRight animate_50ms">
+                           <input id="opt_1" type="radio" name="stp_1_select_option" value="customer" >
+                           <label for="opt_1">Customer</label>
+                        </li>
+                     </ul> -->
+                  </div>
+                  <div class="col-4">
+                        <div class="form_items_content bg-white text-center position-relative step_1 animate__animated animate__fadeInRight animate_150ms">
+                           <label for="opt_2" class="d-block">
+                              <span class="form_items_icon">
+                                 <img src="assets/images/item-img/shop.png" alt="image-not-found">
+                              </span>
+                              <span class="form_items_text pt-2 d-block">
+                                 Coffee shop
+                              </span>
+                              <span class="service-check-option">
+                                 <span><input id="opt_2" type="radio" name="stp_1_select_option" value="shop"></span>
+                              </span>
+                           </label>
+                        </div>
+                     <!-- <ul class="list-unstyled p-0">
+                        <li class="step_1 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_2" type="radio" name="stp_1_select_option" value="shop">
+                           <label for="opt_2">Coffee shop</label>
+                        </li>
+                     </ul> -->
+                  </div>
+                  <div class="col-4">
+                     <div class="form_items_content bg-white text-center position-relative step_1 animate__animated animate__fadeInRight animate_150ms">
+                        <label for="opt_3" class="d-block">
+                           <span class="form_items_icon">
+                              <img src="assets/images/item-img/company.png" alt="image-not-found">
+                           </span>
+                           <span class="form_items_text pt-2 d-block">
+                              Corporate
+                           </span>
+                           <span class="service-check-option">
+                              <span><input id="opt_3" type="radio" name="stp_1_select_option" value="company"></span>
+                           </span>
+                        </label>
+                     </div>
+                     <!-- <ul class="list-unstyled p-0">
+                        <li class="step_1 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_3" type="radio" name="stp_1_select_option" value="company">
+                           <label for="opt_3">Company</label>
+                        </li>
+                     </ul> -->
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step1"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!------------------------- Step-2 ----------------------------->
+            <div class="multisteps_form_panel step" id="step-2">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">How do you prefer your coffee's body?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Home 1</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items ">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_2 animate__animated animate__fadeInRight animate_50ms ">
+                           <input id="opt_rich" type="checkbox" name="stp_2_select_option" value="rich_bold">
+                           <label for="opt_rich">Rich and bold N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_2 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_smooth" type="checkbox" name="stp_2_select_option" value="smooth_creamy">
+                           <label for="opt_smooth">Smooth and creamy N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_2 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_light" type="checkbox" name="stp_2_select_option" value="light_crisp">
+                           <label for="opt_light">Light and crisp N87 N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step2"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-3 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">What flavor notes do you enjoy in your coffee?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Home 2</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_3 animate__animated animate__fadeInRight animate_50ms ">
+                           <input id="opt_sweet" type="checkbox" name="stp_3_select_option" value="sweet_fruity">
+                           <label for="opt_sweet">Sweet and fruity N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_3 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_floral" type="checkbox" name="stp_3_select_option" value="floral_cutis">
+                           <label for="opt_floral">Floral and citrus N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_3 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_nutty" type="checkbox" name="stp_3_select_option" value="nutty_chocolatey">
+                           <label for="opt_nutty">Nutty and chocolatey N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step3"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-4 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">Which coffee processing method do you prefer?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Home 3</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_4 animate__animated animate__fadeInRight animate_50ms ">
+                           <input id="opt_honey" type="checkbox" name="stp_4_select_option" value="honey">
+                           <label for="opt_honey">Honey processed for a sweet, complex profile N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_4 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_fruit" type="checkbox" name="stp_4_select_option" value="fruit">
+                           <label for="opt_fruit">Natural processed for a fruit-forward cup N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_4 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_balanced" type="checkbox" name="stp_4_select_option" value="balanced">
+                           <label for="opt_balanced">Washed processed for a clean, balanced flavor N89 N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step4"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-5 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">What is your preferred coffee drinking time?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Home 4</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_5 animate__animated animate__fadeInRight animate_50ms ">
+                           <input id="opt_morning" type="checkbox" name="stp_5_select_option" value="morning">
+                           <label for="opt_morning">Morning kick-starter N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_5 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_afternoon" type="checkbox" name="stp_5_select_option" value="afternoon">
+                           <label for="opt_afternoon">Afternoon delight N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_5 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_evening" type="checkbox" name="stp_5_select_option" value="evening">
+                           <label for="opt_evening">Evening wind-down N89 N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step5"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-6 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">How do you typically enjoy your coffee?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Home 5</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_6 animate__animated animate__fadeInRight animate_50ms ">
+                           <input id="opt_black" type="checkbox" name="stp_6_select_option" value="black">
+                           <label for="opt_black">Black, to savor the pure flavors N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_6 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_milk" type="checkbox" name="stp_6_select_option" value="milk">
+                           <label for="opt_milk">With a bit of milk or cream N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_6 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_espresso" type="checkbox" name="stp_6_select_option" value="espresso">
+                           <label for="opt_espresso">As an espresso or mixed coffee drink N87 N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step6"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!---------- end customer quiz ---------->
+
+
+            <!------------------------- shop  quiz ----------------------------->
+            <!------------------------- Step-7 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">What type of coffee are you looking to feature in your shop?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Shop 1</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_7 animate__animated animate__fadeInRight animate_50ms ">
+                           <input id="opt_24" type="radio" name="stp_7_select_option" value="1" >
+                           <label for="opt_24">Exclusive, high-quality single origins 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_7 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_25" type="radio" name="stp_7_select_option" value="3">
+                           <label for="opt_25">Popular blends that appeal to a wide audience 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_7 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_26" type="radio" name="stp_7_select_option" value="2">
+                           <label for="opt_26">Unique, niche offerings for connoisseurs 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_7 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_27" type="radio" name="stp_7_select_option" value="4">
+                           <label for="opt_27">Sophisticated, upscale selections 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step7"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-8 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">How do you prioritize the flavor profile in your coffee selection?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Shop 2</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_8 animate__animated animate__fadeInRight animate_50ms ">
+                           <input id="opt_28" type="radio" name="stp_8_select_option" value="2">
+                           <label for="opt_28">Fruit-forward and vibrant 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_8 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_29" type="radio" name="stp_8_select_option" value="3">
+                           <label for="opt_29">Rich and complex 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_8 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_30" type="radio" name="stp_8_select_option" value="1">
+                           <label for="opt_30">Bright and refreshing 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_8 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_31" type="radio" name="stp_8_select_option" value="4">
+                           <label for="opt_31">Floral and creamy 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step8"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-9 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">What level of roast do you prefer for your primary coffee offering?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Shop 3</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_9 animate__animated animate__fadeInRight animate_50ms ">
+                           <input id="opt_32" type="radio" name="stp_9_select_option" value="1">
+                           <label for="opt_32">Light roast to highlight origin characteristics 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_9 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_33" type="radio" name="stp_9_select_option" value="2">
+                           <label for="opt_33">Medium roast for a versatile and balanced cup 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_9 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_34" type="radio" name="stp_9_select_option" value="3">
+                           <label for="opt_34">Medium-dark roast for a slightly richer and deeper flavor 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_9 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_35" type="radio" name="stp_9_select_option" value="4">
+                           <label for="opt_35">Dark roast for boldness and depth 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step9"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-10 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">What level of support do you need in curating your coffee menu?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Shop 4</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_10 animate__animated animate__fadeInRight animate_50ms">
+                           <input id="opt_36" type="radio" name="stp_10_select_option" value="1">
+                           <label for="opt_36">Guidance on selecting beans and blends 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_10 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_37" type="radio" name="stp_10_select_option" value="2">
+                           <label for="opt_37">Help with coffee and food pairings 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_10 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_38" type="radio" name="stp_10_select_option" value="4">
+                           <label for="opt_38">Insights into coffee trends and customer preferences 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_10 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_39" type="radio" name="stp_10_select_option" value="3">
+                           <label for="opt_39">Minimal support 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step10"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-11 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">Are you interested in additional products to complement your coffee menu?
+                  </h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Shop 5</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_11 animate__animated animate__fadeInRight animate_50ms">
+                           <input id="opt_40" type="radio" name="stp_11_select_option" value="4">
+                           <label for="opt_40">Yes, artisanal teas for non-coffee drinkers 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_11 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_41" type="radio" name="stp_11_select_option" value="3">
+                           <label for="opt_41">Yes, handcrafted chocolates as perfect pairings 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_11 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_42" type="radio" name="stp_11_select_option" value="1">
+                           <label for="opt_42">No, I prefer to focus exclusively on coffee 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_11 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_43" type="radio" name="stp_11_select_option" value="Composite volcanoes">
+                           <label for="opt_43">Composite volcanoes</label>
+                        </li>
+                     </ul>
+                  </div> -->
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step11"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!---------- end shop quiz ---------->
+
+
+            <!------------------------- company quiz ----------------------------->
+            <!------------------------- Step-12 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">What flavor profile does your team generally prefer?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Corporate 1</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_12 animate__animated animate__fadeInRight animate_50ms">
+                           <input id="opt_44" type="radio" name="stp_12_select_option" value="1" >
+                           <label for="opt_44">Sweet and fruity 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_12 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_45" type="radio" name="stp_12_select_option" value="3">
+                           <label for="opt_45">Rich and bold 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_12 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_46" type="radio" name="stp_12_select_option" value="2">
+                           <label for="opt_46">Light and crisp 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_12 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_47" type="radio" name="stp_12_select_option" value="4">
+                           <label for="opt_47">Balanced and smooth 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step12"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-13 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">How do your employees usually enjoy their coffee?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Corporate 2</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_13 animate__animated animate__fadeInRight animate_50ms">
+                           <input id="opt_48" type="radio" name="stp_13_select_option" value="4">
+                           <label for="opt_48">Black, to savor the pure flavors 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_13 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_49" type="radio" name="stp_13_select_option" value="3">
+                           <label for="opt_49">With milk or cream 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_13 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_50" type="radio" name="stp_13_select_option" value="1">
+                           <label for="opt_50">As an espresso or strong brew 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_13 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_51" type="radio" name="stp_13_select_option" value="2">
+                           <label for="opt_51">Light and refreshing as an iced or cold brew 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step13"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-14 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">What is the preferred caffeine level at your office?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Corporate 3</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_14 animate__animated animate__fadeInRight animate_50ms">
+                           <input id="opt_52" type="radio" name="stp_14_select_option" value="4">
+                           <label for="opt_52">High for energizing mornings 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_14 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_53" type="radio" name="stp_14_select_option" value="1">
+                           <label for="opt_53">Moderate for balanced productivity 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_14 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_54" type="radio" name="stp_14_select_option" value="2">
+                           <label for="opt_54">Low, suitable for late afternoons 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_14 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_55" type="radio" name="stp_14_select_option" value="3">
+                           <label for="opt_55">Bold and steady throughout the day 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step14"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-15 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">Would you be interested in a coffee subscription plan for regular deliveries?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Corporate 4</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_15 animate__animated animate__fadeInRight animate_50ms">
+                           <input id="opt_56" type="radio" name="stp_15_select_option" value="4">
+                           <label for="opt_56">Yes, weekly deliveries 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_15 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_57" type="radio" name="stp_15_select_option" value="2">
+                           <label for="opt_57">Yes, monthly deliveries 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_15 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_58" type="radio" name="stp_15_select_option" value="3">
+                           <label for="opt_58">Not interested in a subscription 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <!-- <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_15 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_59" type="radio" name="stp_15_select_option" value="Orissa">
+                           <label for="opt_59">Orissa</label>
+                        </li>
+                     </ul>
+                  </div> -->
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step15"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!------------------------- Step-16 ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">What kind of atmosphere does your office strive to create?</h1>
+               </div>
+               <div class="question_number text-center text-uppercase text-white">
+                  <span class="rounded-pill">Corporate 5</span>
+               </div>
+               <div class="row pt-5 mt-4 mb-5 form_items">
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_16 animate__animated animate__fadeInRight animate_50ms">
+                           <input id="opt_60" type="radio" name="stp_16_select_option" value="4">
+                           <label for="opt_60">Energetic and dynamic 4pt N90</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_16 animate__animated animate__fadeInRight animate_100ms">
+                           <input id="opt_61" type="radio" name="stp_16_select_option" value="2">
+                           <label for="opt_61">Relaxed and creative 2pt N88</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_16 animate__animated animate__fadeInRight animate_150ms">
+                           <input id="opt_62" type="radio" name="stp_16_select_option" value="3">
+                           <label for="opt_62">Warm and welcoming 3pt N89</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="col-6">
+                     <ul class="list-unstyled p-0">
+                        <li class="step_16 animate__animated animate__fadeInRight animate_200ms">
+                           <input id="opt_63" type="radio" name="stp_16_select_option" value="1">
+                           <label for="opt_63">Fresh and innovative 1pt N87</label>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="row pt-1 mt-1 mb-0 pb-0 form_items">
+                     <div class="col-12 text-center px-5">
+                        <div class="validation-message" id="validation-step16"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!---------- end company quiz ---------->
+
+            <!------------------------- result ----------------------------->
+            <div class="multisteps_form_panel step">
+               <div class="question_title text-center text-uppercase">
+                  <h1 class="animate__animated animate__fadeInRight animate_25ms">Based on your selections those are the most fitting products</h1>
+               </div>
+               <div class="row pt-1 mt-1 form_items">
+                  <p class="animate__animated animate__fadeInRight animate_25ms text-center" id="result"></p>
+               </div>
+               <div class="row form_items mt-0 pt-0">
+                  <div class="col-6">
+                     <div class="form_items_content bg-white text-center position-relative  animate__animated animate__fadeInRight animate_150ms">
+                        <label class="d-block">
+                           <a href="">
+                              <span>
+                                 <img src="assets/images/item-img/coffee.jpg" alt="image-not-found" style="max-width: 50%;">
+                              </span>
+                              <span class="form_items_text pt-2 d-block" id="result-1">
+                              </span>
+                           </a>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="col-6">
+                        <div class="form_items_content bg-white text-center position-relative animate__animated animate__fadeInRight animate_150ms">
+                           <label class="d-block">
+                              <a href="">
+                                 <span>
+                                    <img src="assets/images/item-img/coffee.jpg" alt="image-not-found" style="max-width: 50%;">
+                                 </span>
+                                 <span class="form_items_text pt-2 d-block" id="result-2">
+                                 </span>
+                              </a>
+                           </label>
+                        </div>
+                  </div>
+               </div>
+            </div>
+            <!---------- end result ---------->
+            
+            <!---------- Form Button ---------->
+            <div class="form_btn">
+               <button type="button" class="prev_btn position-absolute text-uppercase border-0" id="prevBtn" > <span><i class="fas fa-arrow-left"></i></span> Back</button>
+               <button type="button" class="next_btn rounded-pill position-absolute text-uppercase text-white" id="nextBtn" >Next</button>
+            </div>
+         </form>
+      </div>
+   </div>
+   <!-- jQuery-js include -->
+   <script src="./assets/js/jquery-3.6.0.min.js"></script>
+   <!-- Bootstrap-js include -->
+   <script src="./assets/js/bootstrap.min.js"></script>
+   <!-- jQuery-validate-js include -->
+   <script src="./assets/js/jquery.validate.min.js"></script>
+   <!-- Custom-js include -->
+   <!-- <script src="./assets/js/script.js"></script> -->
+   <script type="module" src="js/new/main.js"></script>
+
+
+
+</body>
+</html>
